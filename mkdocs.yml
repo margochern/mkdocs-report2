@@ -1,0 +1,11 @@
+site_name: WEB-Programming
+nav:
+    - Home: index.md
+    - 2 lab:
+      - Модели: models.md
+      - Формы: forms.md
+      - Представления: views.md
+      - Шаблоны: base.md
+      - Поиск и пагинация: pagination.md
+theme:
+    name: readthedocs

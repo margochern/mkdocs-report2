@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Шаблоны - WEB-Programming</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u0428\u0430\u0431\u043b\u043e\u043d\u044b";
+        var mkdocs_page_input_path = "base.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> WEB-Programming
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2 lab</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Модели</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Формы</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../views/">Представления</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Шаблоны</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Были созданы следующие шаблоны, каждый из которых соответствует представлению:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">Общие шаблоны:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">Реализация</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_5">Базовый шаблон</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_6">Код:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_7">Навигационное меню</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">Список отелей</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">Пример:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pagination/">Поиск и пагинация</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">WEB-Programming</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">2 lab</li>
+      <li class="breadcrumb-item active">Шаблоны</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Шаблоны</h1>
+<h3 id="_2">Были созданы следующие шаблоны, каждый из которых соответствует представлению:</h3>
+<h2 id="_3">Общие шаблоны:</h2>
+<ul>
+<li>Базовая страница с хедером и подключением стилей</li>
+<li>Главная страница со списком отелей</li>
+</ul>
+<h2 id="_4">Реализация</h2>
+<h2 id="_5">Базовый шаблон</h2>
+<p>Шаблон <code>base.html</code> используется как основа для всех страниц проекта. Он включает:
+- Подключение стилей и библиотек (Bootstrap 5.3, Flatpickr).
+- Хедер с логотипом, навигацией и пользовательскими кнопками (логин, регистрация, аккаунт, выход).
+- Основной контейнер для вставки содержимого страниц через блоки <code>{% block title %}</code> и <code>{% block main_contents %}</code>.</p>
+<h3 id="_6">Код:</h3>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;title&gt;{% block title %}Base page{% endblock %}&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;
+          integrity=&quot;sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH&quot; crossorigin=&quot;anonymous&quot;&gt;
+    {% load static %}
+    &lt;style&gt;
+        a:link, a:visited {
+            text-decoration: inherit;
+            color: inherit;
+            cursor: auto;
+        }
+    &lt;/style&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;header class=&quot;d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom&quot;&gt;
+        &lt;div class=&quot;col-md-3 mb-2 mb-md-0&quot;&gt;
+            &lt;a href=&quot;/&quot; class=&quot;d-inline-flex link-body-emphasis text-decoration-none&quot;&gt;
+                &lt;!-- SVG Логотип --&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;ul class=&quot;nav col-12 col-md-auto mb-2 justify-content-center mb-md-0&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;/&quot; class=&quot;nav-link px-2 link-secondary&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/hotels/&quot; class=&quot;nav-link px-2&quot;&gt;Hotels&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/bookings/&quot; class=&quot;nav-link px-2&quot;&gt;Your bookings&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/admin/&quot; class=&quot;nav-link px-2&quot;&gt;Admin&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;col-md-3 text-end&quot;&gt;
+            {% if not user.is_authenticated %}
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary me-2&quot;&gt;&lt;a href=&quot;/login/&quot; class=&quot;nav-link px-2&quot;&gt;Login&lt;/a&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;&lt;a href=&quot;/register/&quot; class=&quot;nav-link px-2&quot; style=&quot;color: white&quot;&gt;Sign-up&lt;/a&gt;&lt;/button&gt;
+            {% else %}
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-outline-primary me-2&quot;&gt;&lt;a href=&quot;/bookings/&quot; class=&quot;nav-link px-2&quot;&gt;Your account&lt;/a&gt;&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;&lt;a href=&quot;/logout/&quot; class=&quot;nav-link px-2&quot; style=&quot;color: white&quot;&gt;Logout&lt;/a&gt;&lt;/button&gt;
+            {% endif %}
+        &lt;/div&gt;
+    &lt;/header&gt;
+&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;
+    {% block main_contents %}
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+        &lt;p&gt;You should never see that&lt;/p&gt;
+    {% endblock %}
+&lt;/div&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js&quot;
+        integrity=&quot;sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz&quot;
+        crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    document.addEventListener('DOMContentLoaded', function () {
+        flatpickr(&quot;.flatpickr&quot;, {
+            dateFormat: &quot;Y-m-d&quot;,
+            minDate: &quot;today&quot;,
+        });
+    });
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="_7">Навигационное меню</h2>
+<p>Навигация в шаблоне выполнена с помощью Bootstrap. Она содержит ссылки на главную страницу, список отелей, ваши бронирования и страницу администратора. В зависимости от статуса пользователя (<code>is_authenticated</code>), в хедере отображаются кнопки:
+- Для незарегистрированных пользователей: "Login" и "Sign-up".
+- Для зарегистрированных пользователей: "Your account" и "Logout".</p>
+<h2 id="_8">Список отелей</h2>
+<p>Шаблон отображает список отелей в виде интерактивных карточек. Каждый элемент содержит:
+- Название отеля.
+- Описание.
+- Владелец.
+- Адрес.
+- Среднюю оценку.</p>
+<h3 id="_9">Пример:</h3>
+<pre><code class="language-html">&lt;ul&gt;
+    {% for hotel, rating in hotel_ratings.items %}
+        &lt;li&gt;
+            &lt;a href=&quot;/hotels/{{ hotel.id }}/&quot; style=&quot;color: black&quot;&gt;
+                &lt;div class=&quot;container&quot;&gt;
+                    &lt;div class=&quot;row&quot;&gt;
+                        &lt;div class=&quot;col&quot;&gt;
+                            &lt;div class=&quot;h4&quot;&gt;{{ hotel.name }}&lt;/div&gt;
+                            &lt;p class=&quot;h5&quot;&gt;Description&lt;/p&gt;
+                            &lt;p&gt;{{ hotel.description }}&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col&quot;&gt;
+                            &lt;div class=&quot;h5&quot;&gt;Owner&lt;/div&gt;
+                            &lt;p&gt;{{ hotel.owner.username }}&lt;/p&gt;
+                            &lt;p&gt;Address: {{ hotel.address }}&lt;/p&gt;
+                            &lt;p&gt;Average rating: {{ rating }}&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;hr&gt;
+        &lt;/li&gt;
+    {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../views/" class="btn btn-neutral float-left" title="Представления"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../pagination/" class="btn btn-neutral float-right" title="Поиск и пагинация">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../views/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../pagination/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

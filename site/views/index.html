@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Представления - WEB-Programming</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u041f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u044f";
+        var mkdocs_page_input_path = "views.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> WEB-Programming
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">2 lab</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../models/">Модели</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../forms/">Формы</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Представления</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#_2">Общие контроллеры</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">Главная страница</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_4">Выход из аккаунта</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_5">Тестовый вид</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_6">Пользователи</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_7">Регистрация</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_8">Отели и комнаты</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_9">Список отелей</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_10">Детализация отеля</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_11">Детализация комнаты</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_12">Бронирования</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_13">Создание бронирования</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_14">Список бронирований</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_15">Удаление бронирования</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_16">Отзывы</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_17">Создание отзыва</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../base/">Шаблоны</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../pagination/">Поиск и пагинация</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">WEB-Programming</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">2 lab</li>
+      <li class="breadcrumb-item active">Представления</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">Представления</h1>
+<p>Все представления были реализованы как в функциональном стиле, так и с использованием классов. Они обеспечивают полный функционал для работы с пользователями, бронированиями, отелями и отзывами.</p>
+<h2 id="_2">Общие контроллеры</h2>
+<h3 id="_3">Главная страница</h3>
+<p>Отображает приветственное сообщение с именем пользователя или "анонимный", если пользователь не авторизован.</p>
+<pre><code class="language-python">def IndexView(request):
+    return render(request, 'index.html', context={'username': request.user.username or 'anonymous'})
+</code></pre>
+<h3 id="_4">Выход из аккаунта</h3>
+<p>Пользователь выходит из аккаунта, после чего перенаправляется на главную страницу.</p>
+<pre><code class="language-python">def logout_view(request):
+    logout(request)
+    return redirect('/')
+</code></pre>
+<h3 id="_5">Тестовый вид</h3>
+<p>Тестовый рендеринг базового шаблона.</p>
+<pre><code class="language-python">def test_view(request):
+    return render(request, 'base.html')
+</code></pre>
+<h2 id="_6">Пользователи</h2>
+<h3 id="_7">Регистрация</h3>
+<p>Регистрация пользователя через форму. После успешной регистрации пользователь перенаправляется на страницу входа.</p>
+<pre><code class="language-python">class RegisterView(View):
+    def get(self, request):
+        form = CustomUserCreationForm()
+        return render(request, 'register.html', {'form': form})
+
+    def post(self, request):
+        form = CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/login/')
+        return render(request, 'register.html', {'form': form})
+</code></pre>
+<h2 id="_8">Отели и комнаты</h2>
+<h3 id="_9">Список отелей</h3>
+<p>Выводит список отелей с пагинацией (10 отелей на страницу). Включает средний рейтинг отеля.</p>
+<pre><code class="language-python">class HotelListView(ListView):
+    model = Hotel
+    template_name = 'hotels/list.html'
+    context_object_name = 'hotels_list'
+    paginate_by = 10
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(*args, **kwargs)
+        context.update({
+            &quot;hotel_ratings&quot;: {
+                h: Review.objects.filter(reservation__room__hotel=h).aggregate(Avg('rating'))['rating__avg'] or 'No data'
+                for h in context['hotels_list']
+            }
+        })
+        return context
+</code></pre>
+<h3 id="_10">Детализация отеля</h3>
+<p>Отображает информацию об отеле, включая список комнат и отзывы.</p>
+<pre><code class="language-python">class HotelDetailView(DetailView):
+    model = Hotel
+    template_name = 'hotels/details.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({
+            &quot;hotel_rooms&quot;: Room.objects.filter(hotel=context['hotel']),
+            &quot;review_list&quot;: Review.objects.filter(reservation__room__hotel=context['hotel']),
+        })
+        return context
+</code></pre>
+<h3 id="_11">Детализация комнаты</h3>
+<p>Отображает информацию о комнате, доступные для бронирования даты и форму для бронирования.</p>
+<pre><code class="language-python">class RoomDetailView(DetailView):
+    model = Room
+    template_name = 'room/details.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        dt_start = self.request.GET.get('dt_start') or datetime.today().date()
+        dt_end = self.request.GET.get('dt_end') or datetime.today().date() + timedelta(days=30)
+        dt_start = parse_or_return(dt_start)
+        dt_end = parse_or_return(dt_end)
+        reservations = Reservation.objects.filter(Q(room=context['room']) &amp; (Q(dt_end__gt=dt_start) | Q(dt_end__lte=dt_end)))
+        possible_dates = [dt_start + timedelta(days=i) for i in range((dt_end - dt_start).days + 1)]
+
+        for res in reservations:
+            for dt_possible in range((res.dt_end - res.dt_start).days + 1):
+                try:
+                    possible_dates.remove(res.dt_start + timedelta(days=dt_possible))
+                except ValueError:
+                    pass
+
+        context.update({
+            &quot;possible_dates&quot;: [t.strftime('%d/%m/%Y') for t in possible_dates],
+            &quot;form&quot;: ReservationForm
+        })
+        return context
+</code></pre>
+<h2 id="_12">Бронирования</h2>
+<h3 id="_13">Создание бронирования</h3>
+<p>Создает бронирование, проверяя доступность выбранных дат.</p>
+<pre><code class="language-python">@require_POST
+@login_required
+def create_reservation(request, pk):
+    room = get_object_or_404(Room, pk=pk)
+    dt_start = parse_or_return(request.POST.get('dt_start'))
+    dt_end = parse_or_return(request.POST.get('dt_end'))
+    current_date = datetime.today()
+
+    if dt_start &gt; dt_end:
+        messages.error(request, 'Error: Start date &gt; End Date')
+        return redirect(f'/room/{pk}/')
+    if current_date &gt; dt_start:
+        messages.error(request, &quot;Error: You can't reserve room in the past&quot;)
+        return redirect(f'/room/{pk}/')
+
+    reservations = Reservation.objects.filter(Q(room=room) &amp; (Q(dt_end__gt=dt_start) | Q(dt_end__lte=dt_end)))
+    possible_dates = [dt_start + timedelta(days=i) for i in range((dt_end - dt_start).days + 1)]
+    form = ReservationForm(request.POST)
+
+    for res in reservations:
+        for dt_possible in range((res.dt_end - res.dt_start).days + 1):
+            try:
+                possible_dates.remove(res.dt_start + timedelta(days=dt_possible))
+            except ValueError:
+                pass
+
+    if dt_start in possible_dates and dt_end in possible_dates:
+        try:
+            if form.is_valid():
+                reservation = form.save(commit=False)
+                reservation.room = room
+                reservation.user = request.user
+                reservation.save()
+                messages.success(request, 'Reservation created successfully!')
+                return redirect(f'/room/{pk}/', pk=pk)
+            else:
+                messages.error(request, 'Please correct the errors below.')
+        except ValueError:
+            return HttpResponseForbidden(&quot;Bad data&quot;)
+    return messages.error(request, &quot;Reservation not created.&quot;)
+</code></pre>
+<h3 id="_14">Список бронирований</h3>
+<p>Выводит список бронирований пользователя.</p>
+<pre><code class="language-python">class BookingsListView(LoginRequiredMixin, ListView):
+    model = Reservation
+    template_name = 'bookings/list.html'
+    context_object_name = 'reservations'
+
+    def get_queryset(self):
+        if self.request.user.is_authenticated:
+            return Reservation.objects.filter(user=self.request.user)
+        return Reservation.objects.none()
+</code></pre>
+<h3 id="_15">Удаление бронирования</h3>
+<p>Удаляет бронирование, если пользователь имеет на это право.</p>
+<pre><code class="language-python">class BookingDeleteView(LoginRequiredMixin, DeleteView):
+    model = Reservation
+    template_name = 'bookings/delete.html'
+    success_url = reverse_lazy('bookings')
+
+    def post(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != self.request.user:
+            return HttpResponseForbidden(&quot;You do not have permission to delete this object.&quot;)
+        return super().post(request, *args, **kwargs)
+</code></pre>
+<h2 id="_16">Отзывы</h2>
+<h3 id="_17">Создание отзыва</h3>
+<p>Пользователь может оставить отзыв только для своего бронирования.</p>
+<pre><code class="language-python">class ReviewCreateView(LoginRequiredMixin, CreateView):
+    model = Review
+    template_name = 'bookings/create.html'
+    fields = ['text', 'rating']
+    success_url = reverse_lazy('bookings')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        reservation = get_object_or_404(Reservation, pk=self.kwargs['pk'])
+        if reservation.user != self.request.user:
+            return HttpResponseForbidden(&quot;You do not have permission to review this reservation.&quot;)
+        form.instance.reservation = reservation
+        return super().form_valid(form)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../forms/" class="btn btn-neutral float-left" title="Формы"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../base/" class="btn btn-neutral float-right" title="Шаблоны">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../forms/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../base/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
